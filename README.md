@@ -9,7 +9,7 @@ M.S. Cybersecurity @ Yeshiva University (May 2027) · Ex-Amazon · New York / Ne
   <img src="https://img.shields.io/badge/Open%20to-Cloud%20Security%20roles-2EA44F?style=flat-square" alt="Open to Cloud Security roles">
 </p>
 
-I build security into cloud infrastructure before it ships. My work focuses on catching misconfigurations in Terraform before they deploy, and on detecting and correlating threats across AWS, Azure and GCP.
+I build security into cloud infrastructure before it ships. My work focuses on catching misconfigurations in Terraform before they deploy, and on detecting and triaging threats across AWS, Azure and GCP with a local AI analyst that keeps a human in charge.
 
 ## Featured projects
 
@@ -21,22 +21,22 @@ A deterministic static-analysis scanner that catches Terraform misconfigurations
 
 `TypeScript` `Next.js` `GitHub Actions` `SARIF`
 
-### [CloudSentinel](https://github.com/hirveyash/CloudSentinel) · Multi-cloud threat detection and response
-Turns scattered cloud alerts into one incident.
-- Normalizes **AWS GuardDuty**, **Azure Defender for Cloud** and **GCP Security Command Center** findings into one schema
-- Correlates events by source IP and identity into **cross-cloud incidents**, with explainable 0–100 risk scores
-- Analyst-approved response actions (quarantine, revoke credentials) recorded in an authenticated audit log
+### [Cloud Sentinel](https://github.com/hirveyash/cloud-sentinel-soc) · Multi-cloud SOC with local-LLM triage
+A zero-cost mini-SIEM: one board for three clouds, an AI analyst that never leaves your laptop, and a human hold line.
+- Normalizes **AWS Security Hub (ASFF)**, **GCP Security Command Center** and **Microsoft Defender for Cloud** findings and correlates them by attacker IP into **multi-cloud incidents**
+- A **local Llama 3.1 8B** (Ollama) explains why each incident was flagged and previews a playbook. Evidence-only prompts, schema-validated output and a fixed **MITRE ATT&CK** mapping
+- **Human-in-the-loop:** every incident holds until an analyst records a justified decision, written to an **append-only** SQLite audit trail
 
-`TypeScript` `Next.js` `AWS SDK` `Vitest`
+`Python` `FastAPI` `React` `SQLite` `Ollama`
 
 ## What I work with
 
 | Area | Tools |
 | --- | --- |
-| Cloud | AWS (IAM, VPC, KMS, GuardDuty, CloudTrail, CloudWatch), Azure Defender for Cloud, GCP SCC |
+| Cloud | AWS (IAM, VPC, KMS, Security Hub, GuardDuty, CloudTrail, CloudWatch), Azure Defender for Cloud, GCP SCC |
 | Infrastructure & DevSecOps | Terraform, Docker, Kubernetes, GitHub Actions, Trivy, Checkov |
 | Security | IAM & least privilege, IaC security, threat detection, incident response, CIS Benchmarks, NIST 800-53, MITRE ATT&CK |
-| Languages | Python, TypeScript, Go, Bash, SQL |
+| Languages & frameworks | Python (FastAPI), TypeScript, React, Go, Bash, SQL |
 
 ## Certifications
 
